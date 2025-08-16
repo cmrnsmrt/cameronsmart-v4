@@ -89,10 +89,19 @@ const Resume = () => {
           <p className="text-xl text-foreground-muted max-w-3xl mx-auto mb-8">
             A comprehensive overview of my career journey and achievements
           </p>
-          <Button size="lg" className="hero-button">
-            <Download className="mr-2 h-5 w-5" />
-            Download Full Resume (PDF)
-          </Button>
+          <a
+            href="/lovable-uploads/cameron-smart.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button size="lg" className="hero-button" asChild>
+              <span className="flex items-center">
+                <Download className="mr-2 h-5 w-5"/>
+                Download Full Resume (PDF)
+              </span>
+            </Button>
+          </a>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-12">

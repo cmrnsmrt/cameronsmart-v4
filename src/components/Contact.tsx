@@ -64,10 +64,10 @@ const Contact = () => {
                 <div>
                   <p className="font-semibold">Email</p>
                   <a 
-                    href="mailto:cameron@cameronsmart.dev" 
+                    href="mailto:cameron.smart@hotmail.co.uk" 
                     className="text-foreground-muted hover:text-primary transition-colors"
                   >
-                    cameron@cameronsmart.dev
+                    cameron.smart@hotmail.co.uk
                   </a>
                 </div>
               </div>
@@ -78,7 +78,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-semibold">Location</p>
-                  <p className="text-foreground-muted">San Francisco, CA</p>
+                  <p className="text-foreground-muted">Dundee, Scotland</p>
                   <p className="text-foreground-muted text-sm">Open to remote opportunities</p>
                 </div>
               </div>
@@ -88,7 +88,7 @@ const Contact = () => {
               <h4 className="text-lg font-semibold text-primary">Follow Me</h4>
               <div className="flex space-x-4">
                 <a
-                  href="https://github.com/cameronsmart"
+                  href="https://github.com/cmrnsmrt"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-card p-4 rounded-lg border border-card-border hover:border-primary/30 transition-colors group"
@@ -96,7 +96,7 @@ const Contact = () => {
                   <Github className="h-6 w-6 text-foreground-muted group-hover:text-primary transition-colors" />
                 </a>
                 <a
-                  href="https://linkedin.com/in/cameronsmart"
+                  href="https://linkedin.com/in/cameronstewartsmart"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-card p-4 rounded-lg border border-card-border hover:border-primary/30 transition-colors group"

@@ -62,7 +62,54 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/cf9b162e-7931-4693-b6ab-15dd9b671fa0) and click on Share -> Publish.
+
+### Local Development
+
+1. **Install dependencies:**
+   ```sh
+   npm install
+   # or, if you use bun:
+   bun install
+   ```
+2. **Start the development server:**
+   ```sh
+   npm run dev
+   # or
+   bun run dev
+   ```
+   The app will be available at http://localhost:5173 (or as indicated in the terminal).
+
+### Production Build
+
+1. **Build the app:**
+   ```sh
+   npm run build
+   ```
+2. **Preview the production build:**
+   ```sh
+   npm run preview
+   ```
+
+### Run in a Container (Docker)
+
+1. **Build the Docker image:**
+   ```sh
+   docker build -t software-engineer-resume .
+   ```
+   > **Note:** If you do not use Bun, you may not have a `bun.lockb` file. The Dockerfile will work with either Bun or npm.
+2. **Run the container:**
+   ```sh
+   docker run -p 4173:4173 software-engineer-resume
+   ```
+   The app will be available at http://localhost:4173
+
+### Deploy to Azure
+
+You can deploy the Docker image to Azure Web App for Containers or Azure Container Apps. See [Azure documentation](https://learn.microsoft.com/en-us/azure/app-service/quickstart-custom-container?tabs=dotnet&pivots=container-linux) for details.
+
+---
+
+Alternatively, you can still open [Lovable](https://lovable.dev/projects/cf9b162e-7931-4693-b6ab-15dd9b671fa0) and click on Share -> Publish.
 
 ## Can I connect a custom domain to my Lovable project?
 

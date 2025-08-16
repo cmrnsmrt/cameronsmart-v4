@@ -16,7 +16,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://github.com/cameronsmart"
+                href="https://github.com/cmrnsmrt"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground-muted hover:text-primary transition-colors"
@@ -25,7 +25,7 @@ const Footer = () => {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="https://linkedin.com/in/cameronsmart"
+                href="https://linkedin.com/in/cameronstewartsmart"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground-muted hover:text-primary transition-colors"
