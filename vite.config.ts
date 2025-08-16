@@ -10,9 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   preview: {
-    allowedHosts: process.env.ALLOWED_HOSTS
-      ? process.env.ALLOWED_HOSTS.split(",")
-      : ["*"]
+    allowedHosts: ["*"]
   },
   plugins: [
     react(),
