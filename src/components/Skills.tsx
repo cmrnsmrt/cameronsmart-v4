@@ -1,34 +1,34 @@
 import { Code, Database, Cloud, GitBranch, Cpu, Globe } from "lucide-react";
 const Skills = () => {
   const skillCategories = [{
-    title: "Languages & Frameworks",
+    title: "Programming Languages",
     icon: Code,
-    skills: ["TypeScript", "Python", "Java", "Go", "React", "Node.js", "Spring Boot", "FastAPI"],
+    skills: ["Python", "C#", "C++", "JavaScript", "React", "Node.js", "PowerShell", "Batch"],
+    color: "primary"
+  }, {
+    title: "DevOps & Cloud",
+    icon: Cloud,
+    skills: ["Azure", "Kubernetes", "Docker", "GitHub Actions", "Jenkins", "CI/CD Pipelines"],
+    color: "accent"
+  }, {
+    title: "Development Tools",
+    icon: GitBranch,
+    skills: ["Git", "Jira", "Confluence", "SonarQube", "TDD", "Agile/Scrum"],
     color: "primary"
   }, {
     title: "Architecture & Design",
     icon: Cpu,
-    skills: ["Microservices", "Event-Driven Architecture", "Domain-Driven Design", "CQRS", "Clean Architecture"],
+    skills: ["System Architecture", "IoT Solutions", "Microservices", "Enterprise Solutions", "Predictive Maintenance"],
     color: "accent"
   }, {
-    title: "Databases & Storage",
+    title: "Certifications",
     icon: Database,
-    skills: ["PostgreSQL", "MongoDB", "Redis", "Apache Kafka", "Elasticsearch", "Apache Cassandra"],
+    skills: ["PMI CAPM", "MHFA Mental Health Champion", "Azure Certified", "Kubernetes Certified"],
     color: "primary"
   }, {
-    title: "Cloud & Infrastructure",
-    icon: Cloud,
-    skills: ["AWS", "Docker", "Kubernetes", "Terraform", "GitLab CI/CD", "Monitoring & Observability"],
-    color: "accent"
-  }, {
-    title: "Development Practices",
-    icon: GitBranch,
-    skills: ["Test-Driven Development", "Code Review", "Agile Methodologies", "Technical Leadership"],
-    color: "primary"
-  }, {
-    title: "Integration & APIs",
+    title: "Specializations",
     icon: Globe,
-    skills: ["REST APIs", "GraphQL", "gRPC", "WebSockets", "Message Queues", "API Gateway Patterns"],
+    skills: ["Fintech Solutions", "ATM Systems", "Global IoT Deployment", "Enterprise Scale", "DevOps Automation"],
     color: "accent"
   }];
   const getColorClasses = (color: string) => {

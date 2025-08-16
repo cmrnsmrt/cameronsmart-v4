@@ -30,8 +30,8 @@ const Hero = () => {
                 Software Engineer | Software Architecture
               </p>
               <p className="text-lg text-foreground-muted max-w-lg mx-auto lg:mx-0">
-                Passionate about solving complex problems through elegant software design. 
-                I craft scalable architectures that turn ambitious ideas into reality.
+                Career-driven Software Engineer with experience delivering enterprise-scale solutions in the fintech sector. 
+                Passionate about creating positive change through innovative technology and collaborative leadership.
               </p>
             </div>
 
