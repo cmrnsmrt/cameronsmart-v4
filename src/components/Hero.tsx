@@ -1,6 +1,6 @@
 import { ArrowDown, Download, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import cameronHero from "@/assets/cameron-hero.jpg";
+
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -71,8 +71,8 @@ const Hero = () => {
             <div className="relative w-80 h-80 lg:w-96 lg:h-96 mx-auto">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl animate-glow" />
               <img
-                src={cameronHero}
-                alt="Cameron Smart - Software Engineer"
+                src="/lovable-uploads/89753888-5b5b-4aba-965e-6999e8fe4479.png"
+                alt="Cameron Smart working with robotic automation equipment"
                 className="relative z-10 w-full h-full object-cover rounded-2xl border border-card-border"
               />
             </div>
