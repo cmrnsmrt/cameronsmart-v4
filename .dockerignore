@@ -1,0 +1,11 @@
+# .dockerignore
+node_modules
+bun.lockb
+*.log
+dist
+.git
+.gitignore
+Dockerfile
+README.md
+.env
+.env.*

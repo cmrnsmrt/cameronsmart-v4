@@ -35,20 +35,27 @@ const Hero = () => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
               <button onClick={scrollToAbout} className="hero-button">
                 Explore My Work
                 <ArrowDown className="ml-2 h-5 w-5" />
               </button>
-              <Button variant="outline" size="lg" className="accent-button">
-                <Download className="mr-2 h-5 w-5" />
-                Download Resume
-              </Button>
+              <a
+                href="/lovable-uploads/cameron-smart.pdf"
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" size="lg" className="accent-button">
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Resume
+                </Button>
+              </a>
             </div>
 
             <div className="flex items-center justify-center lg:justify-start space-x-6">
               <a
-                href="https://github.com/cameronsmart"
+                href="https://github.com/cmrnsmrt"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground-muted hover:text-primary transition-colors p-2"
@@ -56,7 +63,7 @@ const Hero = () => {
                 <Github className="h-6 w-6" />
               </a>
               <a
-                href="https://linkedin.com/in/cameronsmart"
+                href="https://linkedin.com/in/cameronstewartsmart"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground-muted hover:text-primary transition-colors p-2"
