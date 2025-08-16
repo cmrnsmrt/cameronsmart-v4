@@ -69,7 +69,12 @@ const Skills = () => {
                 </div>
 
                 <div className="space-y-3">
-                  {category.skills.map((skill, skillIndex) => {})}
+                  {category.skills.map((skill, skillIndex) => (
+                    <div key={skillIndex} className="flex items-center">
+                      <span className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0" />
+                      <span className="text-foreground-muted">{skill}</span>
+                    </div>
+                  ))}
                 </div>
               </div>;
         })}

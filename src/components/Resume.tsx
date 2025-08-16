@@ -4,36 +4,62 @@ import { Button } from "@/components/ui/button";
 const Resume = () => {
   const experience = [
     {
-      title: "Senior Software Architect",
-      company: "TechCorp Solutions",
-      location: "San Francisco, CA",
-      period: "2022 - Present",
+      title: "Software Engineer III",
+      company: "NCR Atleos",
+      location: "Dundee",
+      period: "May 2025 - Current",
       achievements: [
-        "Led architecture redesign of core platform serving 10M+ users",
-        "Reduced system latency by 40% through microservices migration",
-        "Mentored team of 8 engineers on architectural best practices"
+        "Co-ordinating with TeamViewer to deliver the future of ATM servicing using augmented reality",
+        "Driving industry adopted best practices in containerisation by migrating from VMs to Azure managed Kubernetes",
+        "Rearchitecting and redeveloping existing outdated systems from the ground up using TDD"
       ]
     },
     {
-      title: "Software Engineering Lead",
-      company: "InnovateTech",
-      location: "Austin, TX",
-      period: "2020 - 2022",
+      title: "Software Engineer II",
+      company: "NCR Atleos",
+      location: "Dundee",
+      period: "January 2025 - May 2025",
       achievements: [
-        "Designed and implemented event-driven architecture for real-time systems",
-        "Improved deployment frequency from weekly to daily releases",
-        "Established code review standards and technical documentation practices"
+        "Delivering enterprise-grade Python programs for preventative maintenance analysis of NCR Atleos ATMs",
+        "Taking ownership of systems architecture through full review and redesign",
+        "Migrating team environment from outdated local server to cloud-based CI/CD infrastructure",
+        "Volunteering as STEM Youth Role Model and member of NCR Atleos Dundee Diversity culture crew"
       ]
     },
     {
-      title: "Full Stack Developer",
-      company: "StartupVenture",
-      location: "Remote",
-      period: "2018 - 2020",
+      title: "Software Engineer I",
+      company: "NCR Atleos",
+      location: "Dundee",
+      period: "July 2023 - January 2025",
       achievements: [
-        "Built MVP from concept to 100K users in 18 months",
-        "Implemented CI/CD pipeline reducing deployment time by 75%",
-        "Contributed to scaling infrastructure to handle 10x user growth"
+        "Developed NCR Atleos IoT Enterprise OEM Windows image deployed on 285,000+ ATMs globally",
+        "Created tools for software integration and hardware testing of new components",
+        "Deployed and maintained cloud solutions on Microsoft Azure using Kubernetes",
+        "Refactored OEM Windows Image build process from manual to fully automated, saving 100s of hours annually"
+      ]
+    },
+    {
+      title: "Software Research Assistant",
+      company: "Abertay University",
+      location: "Dundee",
+      period: "November 2022 - June 2023",
+      achievements: [
+        "Created gamified bug bounty application using React and Node.js with MongoDB backend",
+        "Selected based on web development excellence and interest in meaningful computer interaction",
+        "Work included in published research paper exploring gamification in cybersecurity",
+        "Presented monthly updates to stakeholders on project progress"
+      ]
+    },
+    {
+      title: "Sales Assistant",
+      company: "Currys PLC",
+      location: "Dundee", 
+      period: "October 2020 - June 2023",
+      achievements: [
+        "Consistently achieved 30 KPIs and remained within company's top 500 colleagues",
+        "Completed 100% of company's skills matrix across multiple departments",
+        "Selected as product reviewer for HP, Sage Appliances, Logitech and Google",
+        "Achieved Mental Health Champion certificate from MHFA England"
       ]
     }
   ];
