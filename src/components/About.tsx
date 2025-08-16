@@ -1,6 +1,5 @@
 const About = () => {
-  return (
-    <section id="about" className="section-padding bg-background-secondary">
+  return <section id="about" className="section-padding bg-background-secondary">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
@@ -29,12 +28,7 @@ const About = () => {
 
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold text-primary">Philosophy</h3>
-              <p className="text-foreground-muted leading-relaxed">
-                I believe that great software architecture is like a well-designed city—it should be 
-                intuitive to navigate, efficient in its layout, and capable of growing organically 
-                while preserving its core identity. Every line of code should serve a purpose, and 
-                every architectural decision should be deliberate and well-reasoned.
-              </p>
+              <p className="text-foreground-muted leading-relaxed">I believe that great software architecture is like a well-designed city. It should be intuitive to navigate, efficient in its layout, and capable of growing organically while preserving its core identity. Every line of code should serve a purpose, and every architectural decision should be deliberate and well-reasoned while always considering the relationship between business value delivered and effort required.</p>
             </div>
 
             <div className="space-y-4">
@@ -63,20 +57,12 @@ const About = () => {
           <div className="space-y-8">
             <div className="tech-card">
               <h4 className="text-xl font-semibold mb-4 text-accent">Current Focus</h4>
-              <p className="text-foreground-muted">
-                I'm currently exploring microservices architectures, event-driven systems, 
-                and the intersection of DevOps and software architecture. Always excited 
-                about emerging technologies that can solve real-world problems more effectively.
-              </p>
+              <p className="text-foreground-muted">I'm currently exploring microservices architectures, event-driven systems, and the intersection of DevOps and software architecture. Currently with NCR Atleos - working on the future of ATM servicing, utilising cloud-native architectures to ensure that our ATMs provide customers have access to cash when it matters most. Always excited about emerging technologies that can solve real-world problems more effectively. </p>
             </div>
 
             <div className="tech-card">
               <h4 className="text-xl font-semibold mb-4 text-accent">When I'm Not Coding</h4>
-              <p className="text-foreground-muted">
-                You'll find me contributing to open-source projects, writing technical articles, 
-                or mentoring junior developers. I believe in giving back to the community that 
-                has given me so much throughout my career.
-              </p>
+              <p className="text-foreground-muted">You'll find me out and about Scotland or the world taking pictures of whatever I feel like in the moment, earning new qualifications or making YouTube videos when inspiration kicks in. </p>
             </div>
 
             <div className="tech-card">
@@ -90,8 +76,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
