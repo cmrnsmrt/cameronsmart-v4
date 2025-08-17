@@ -25,6 +25,7 @@ WORKDIR /app
 # Copy built assets and necessary files from build stage
 COPY --from=build /app/dist ./dist
 COPY --from=build /app/package.json ./
+COPY --from=build /app/vite.config.* ./
 
 # Install all dependencies
 RUN npm install
@@ -33,4 +34,4 @@ RUN npm install
 EXPOSE 4173
 
 # Start the app using Vite preview
-CMD ["npx", "vite", "preview", "--port", "4173", "--host"]
+CMD ["npx", "vite", "preview", "--port", "4173", "--host", "0.0.0.0"]
