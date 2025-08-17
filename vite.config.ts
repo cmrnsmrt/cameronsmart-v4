@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   preview: {
-    allowedHosts: ["software-engineer-resume-app.happymushroom-58b39bbd.ukwest.azurecontainerapps.io"]
+    allowedHosts: true
   },
   plugins: [
     react(),
