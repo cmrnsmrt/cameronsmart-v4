@@ -13,7 +13,7 @@ const Skills = () => {
   }, {
     title: "Development Tools",
     icon: GitBranch,
-    skills: ["Git", "Jira", "Confluence", "SonarQube", "TDD", "Agile/Scrum"],
+    skills: ["Git", "Jira", "Confluence", "SonarQube", "Test Driven Development", "Agile/Scrum"],
     color: "primary"
   }, {
     title: "Architecture & Design",
@@ -23,7 +23,7 @@ const Skills = () => {
   }, {
     title: "Certifications",
     icon: Database,
-    skills: ["PMI CAPM", "MHFA Mental Health Champion", "Azure Certified", "Kubernetes Certified"],
+    skills: ["PMI CAPM", "MHFA England Mental Health Champion"],
     color: "primary"
   }, {
     title: "Specializations",

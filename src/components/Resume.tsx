@@ -66,17 +66,11 @@ const Resume = () => {
 
   const education = [
     {
-      degree: "Master of Science in Computer Science",
-      school: "Stanford University",
-      period: "2016 - 2018",
-      focus: "Distributed Systems & Software Architecture"
+      degree: "Bachelors of Science (Hons) in Computing",
+      school: "University of Abertay Dundee",
+      period: "2019 - 2023",
+      focus: "Software Engiineering, Software Architecture, Cybersecurity, Human-Computer Interaction"
     },
-    {
-      degree: "Bachelor of Science in Software Engineering",
-      school: "University of California, Berkeley",
-      period: "2012 - 2016",
-      focus: "Magna Cum Laude"
-    }
   ];
 
   return (
@@ -159,10 +153,7 @@ const Resume = () => {
               <h3 className="text-2xl font-bold text-primary mb-6">Certifications</h3>
               <div className="space-y-4">
                 {[
-                  "AWS Solutions Architect Professional",
-                  "Kubernetes Certified Application Developer",
-                  "Google Cloud Professional Architect",
-                  "Certified Scrum Master"
+                  "Project Management Institute Certified Associate in Project Management (CAPM)",
                 ].map((cert, index) => (
                   <div key={index} className="tech-card">
                     <p className="font-medium">{cert}</p>
@@ -177,19 +168,15 @@ const Resume = () => {
                 <ul className="space-y-3 text-sm">
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-accent rounded-full mr-3 mt-2 flex-shrink-0" />
-                    <span className="text-foreground-muted">Speaker at 5+ technical conferences</span>
+                    <span className="text-foreground-muted"></span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-accent rounded-full mr-3 mt-2 flex-shrink-0" />
-                    <span className="text-foreground-muted">Contributed to 15+ open source projects</span>
+                    <span className="text-foreground-muted"></span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-accent rounded-full mr-3 mt-2 flex-shrink-0" />
-                    <span className="text-foreground-muted">Published 20+ technical articles</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-accent rounded-full mr-3 mt-2 flex-shrink-0" />
-                    <span className="text-foreground-muted">Mentored 25+ junior developers</span>
+                    <span className="text-foreground-muted"></span>
                   </li>
                 </ul>
               </div>

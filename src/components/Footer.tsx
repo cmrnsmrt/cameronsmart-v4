@@ -49,10 +49,10 @@ const Footer = () => {
             <nav className="flex flex-col space-y-2">
               {[
                 { label: "About", href: "#about" },
-                { label: "Projects", href: "#projects" },
+                // { label: "Projects", href: "#projects" },
                 { label: "Skills", href: "#skills" },
                 { label: "Resume", href: "#resume" },
-                { label: "Blog", href: "#blog" },
+                // { label: "Blog", href: "#blog" },
                 { label: "Contact", href: "#contact" },
               ].map((link) => (
                 <button
@@ -66,25 +66,6 @@ const Footer = () => {
                 </button>
               ))}
             </nav>
-          </div>
-
-          {/* Latest Blog Posts */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-primary">Latest Posts</h4>
-            <div className="space-y-3">
-              {[
-                "Designing Resilient Microservices",
-                "Event-Driven Architecture Guide",
-                "My Software Engineering Journey"
-              ].map((post, index) => (
-                <button
-                  key={index}
-                  className="block text-sm text-foreground-muted hover:text-primary transition-colors text-left leading-relaxed"
-                >
-                  {post}
-                </button>
-              ))}
-            </div>
           </div>
         </div>
 
