@@ -26,10 +26,8 @@ WORKDIR /app
 COPY --from=build /app/dist ./dist
 COPY --from=build /app/package.json ./
 
-
-
-# Install only production dependencies (including Vite for preview)
-RUN npm install --production && npm install vite
+# Install all dependencies
+RUN npm install
 
 # Expose port (Vite preview default is 4173)
 EXPOSE 4173
