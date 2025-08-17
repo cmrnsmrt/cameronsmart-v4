@@ -16,10 +16,10 @@ const Navigation = () => {
 
   const navItems = [
     { label: "About", href: "#about" },
-    { label: "Projects", href: "#projects" },
+    // { label: "Projects", href: "#projects" },
     { label: "Skills", href: "#skills" },
     { label: "Resume", href: "#resume" },
-    { label: "Blog", href: "#blog" },
+    // { label: "Blog", href: "#blog" },
     { label: "Contact", href: "#contact" },
   ];
 
