@@ -74,7 +74,7 @@ const Footer = () => {
             © {currentYear} Cameron Smart. All rights reserved.
           </p>
           <p className="text-foreground-muted text-sm flex items-center mt-4 sm:mt-0">
-            Built with <Heart className="h-4 w-4 mx-1 text-accent" /> using React & TypeScript
+            Built with React & TypeScript
           </p>
         </div>
       </div>
