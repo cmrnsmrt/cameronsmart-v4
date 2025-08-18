@@ -168,15 +168,15 @@ const Resume = () => {
                 <ul className="space-y-3 text-sm">
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-accent rounded-full mr-3 mt-2 flex-shrink-0" />
-                    <span className="text-foreground-muted"></span>
+                    <span className="text-foreground-muted">Scaled IoT solutions powering 285,000+ ATMs worldwide.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-accent rounded-full mr-3 mt-2 flex-shrink-0" />
-                    <span className="text-foreground-muted"></span>
+                    <span className="text-foreground-muted">Drove cloud & CI/CD migrations, boosting speed and reliability.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-accent rounded-full mr-3 mt-2 flex-shrink-0" />
-                    <span className="text-foreground-muted"></span>
+                    <span className="text-foreground-muted">PMI-CAPM certified; active in STEM outreach & D&I advocacy.</span>
                   </li>
                 </ul>
               </div>
