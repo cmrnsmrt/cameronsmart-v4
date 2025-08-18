@@ -41,7 +41,7 @@ const Hero = () => {
                 <ArrowDown className="ml-2 h-5 w-5" />
               </button>
               <a
-                href="/content/cameron-smart.pdf"
+                href="/content/cameron-smart-resume.pdf"
                 download
                 target="_blank"
                 rel="noopener noreferrer"
