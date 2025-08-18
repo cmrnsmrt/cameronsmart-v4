@@ -7,7 +7,7 @@ on:
       - main
     paths:
       - '**'
-      - '.github/workflows/software-engineer-resume-app-AutoDeployTrigger.yml'
+      - '.github/workflows/software-engineer-resume-app-AutoDeployTrigger-4fca62f8-ced7-4c17-ae31-73e3cdc31730.yml'
 
   # Allow manual trigger 
   workflow_dispatch:      
