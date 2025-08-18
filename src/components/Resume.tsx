@@ -84,7 +84,7 @@ const Resume = () => {
             A comprehensive overview of my career journey and achievements
           </p>
           <a
-            href="/content/cameron-smart.pdf"
+            href="/content/cameron-smart-resume.pdf"
             download
             target="_blank"
             rel="noopener noreferrer"
