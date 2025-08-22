@@ -1,4 +1,4 @@
-import { ArrowDown, Download, Github, Linkedin } from "lucide-react";
+import { ArrowDown, Download, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 
@@ -69,6 +69,14 @@ const Hero = () => {
                 className="text-foreground-muted hover:text-primary transition-colors p-2"
               >
                 <Linkedin className="h-6 w-6" />
+              </a>
+              <a
+                href="mailto:cameron.smart@hotmail.co.uk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground-muted hover:text-primary transition-colors p-2"
+              >
+                <Mail className="h-6 w-6" />
               </a>
             </div>
           </div>
