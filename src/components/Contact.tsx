@@ -4,8 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { useAnalytics } from "@/hooks/use-analytics";
 
 const Contact = () => {
+  const { event } = useAnalytics();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,7 +18,8 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to a backend service
+    // Really need to implement form submission logic here
+    event('form_submit', 'contact', 'contact_form');
     toast({
       title: "Message sent!",
       description: "Thank you for reaching out. I'll get back to you soon.",

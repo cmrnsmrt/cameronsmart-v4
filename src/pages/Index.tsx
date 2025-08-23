@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -7,8 +8,15 @@ import Resume from "@/components/Resume";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { useAnalytics } from "@/hooks/use-analytics";
 
 const Index = () => {
+  const { pageView } = useAnalytics();
+
+  useEffect(() => {
+    pageView('Home', '/');
+  }, [pageView]);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
