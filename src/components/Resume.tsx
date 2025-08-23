@@ -1,7 +1,9 @@
 import { Download, MapPin, Calendar, Building } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useAnalytics } from "@/hooks/use-analytics";
 
 const Resume = () => {
+  const { event } = useAnalytics();
   const experience = [
     {
       title: "Software Engineer III",
@@ -88,6 +90,7 @@ const Resume = () => {
             download
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => event('download', 'resume', 'resume_pdf')}
           >
             <Button size="lg" className="hero-button" asChild>
               <span className="flex items-center">

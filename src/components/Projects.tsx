@@ -1,6 +1,8 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useAnalytics } from "@/hooks/use-analytics";
 const Projects = () => {
+  const { event } = useAnalytics();
   const projects = [{
     title: "Microservices E-Commerce Platform",
     description: "Architected and built a scalable e-commerce platform using microservices architecture, implementing event-driven communication patterns and distributed data management.",
@@ -57,13 +59,23 @@ const Projects = () => {
 
                 <div className="flex flex-col justify-center space-y-4">
                   <Button variant="outline" className="w-full hover:bg-primary hover:text-primary-foreground transition-colors" asChild>
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                    <a 
+                      href={project.demo} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      onClick={() => event('view_demo', 'project', project.title)}
+                    >
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Live Demo
                     </a>
                   </Button>
                   <Button variant="outline" className="w-full hover:bg-card-border" asChild>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <a 
+                      href={project.github} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      onClick={() => event('view_code', 'project', project.title)}
+                    >
                       <Github className="mr-2 h-4 w-4" />
                       View Code
                     </a>
