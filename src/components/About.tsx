@@ -34,22 +34,10 @@ const About = () => {
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold text-primary">Values</h3>
               <ul className="space-y-2 text-foreground-muted">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-primary rounded-full mr-3" />
-                  Innovation through collaboration
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-primary rounded-full mr-3" />
-                  Continuous improvement and learning
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-primary rounded-full mr-3" />
-                  Using technology for positive change
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-primary rounded-full mr-3" />
-                  Commitment to diversity and inclusion
-                </li>
+                <li className="flex items-center"><span className="w-2 h-2 bg-primary rounded-full mr-3"/>Innovation through collaboration</li>
+                <li className="flex items-center"><span className="w-2 h-2 bg-primary rounded-full mr-3"/>Continuous improvement and learning</li>
+                <li className="flex items-center"><span className="w-2 h-2 bg-primary rounded-full mr-3"/>Using technology for positive change</li>
+                <li className="flex items-center"><span className="w-2 h-2 bg-primary rounded-full mr-3"/>Commitment to diversity and inclusion</li>
               </ul>
             </div>
           </div>

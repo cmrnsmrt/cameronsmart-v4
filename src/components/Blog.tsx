@@ -122,7 +122,7 @@ const Blog = () => {
         {/* Blog Posts Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.slice(1).map((post, index) => (
-            <div key={index} className="tech-card group cursor-pointer h-full flex flex-col">
+            <div key={post.title} className="tech-card group cursor-pointer h-full flex flex-col">
               <div className="flex-1 space-y-4">
                 <div className="flex items-center justify-between">
                   <span className="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">
