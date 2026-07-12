@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-2xl font-bold gradient-text">Cameron Smart</h3>
             <p className="text-foreground-muted">
-              Software Engineer specializing in software architecture, 
+              Software Engineering Manager specializing in software architecture, 
               passionate about building scalable and elegant solutions.
             </p>
             <div className="flex space-x-4">
