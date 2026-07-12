@@ -6,14 +6,25 @@ const Resume = () => {
   const { event } = useAnalytics();
   const experience = [
     {
+      title: "Software Engineering Manager",
+      company: "NCR Atleos",
+      location: "Dundee",
+      period: "June 2026 - Current",
+      achievements: [
+        "Leading the Smart Services engineering team of 3 direct-report engineers, translating business priorities into delivery roadmaps and driving measurable business outcomes.",
+        "Driving architecture review and modernisation of legacy systems into scalable, cloud-native services to improve resilience, accelerate delivery, and reduce operational risk.",
+        "Supporting hiring, mentoring, and career development while strengthening engineering standards, delivery accountability, and stakeholder collaboration."
+      ]
+    },
+    {
       title: "Software Engineer III",
       company: "NCR Atleos",
       location: "Dundee",
-      period: "May 2025 - Current",
+      period: "May 2025 - May 2026",
       achievements: [
-        "Co-ordinating with TeamViewer to deliver the future of ATM servicing using augmented reality",
-        "Driving industry adopted best practices in containerisation by migrating from VMs to Azure managed Kubernetes",
-        "Rearchitecting and redeveloping existing outdated systems from the ground up using TDD"
+        "Expanded responsibilities within the Smart Services team, contributing to delivery of secure, high-impact services in a fast-moving fintech environment.",
+        "Partnered with cross-functional teams to implement remote servicing and operational tooling that improved field engineer efficiency and reduced time-to-resolution.",
+        "Applied cloud-native engineering practices, CI/CD automation, and TDD to modernise legacy systems and improve reliability."
       ]
     },
     {
@@ -22,10 +33,9 @@ const Resume = () => {
       location: "Dundee",
       period: "January 2025 - May 2025",
       achievements: [
-        "Delivering enterprise-grade Python programs for preventative maintenance analysis of NCR Atleos ATMs",
-        "Taking ownership of systems architecture through full review and redesign",
-        "Migrating team environment from outdated local server to cloud-based CI/CD infrastructure",
-        "Volunteering as STEM Youth Role Model and member of NCR Atleos Dundee Diversity culture crew"
+        "Developed enterprise-grade Python applications to analyse ATM event data across the global NCR Atleos network, enabling predictive maintenance servicing.",
+        "Owned and redesigned the team’s system architecture, conducting a full review and implementing a modernised design.",
+        "Migrated infrastructure from legacy on-premises servers to a cloud-based CI/CD environment, introducing source control, automated testing, static analysis, and automated deployments."
       ]
     },
     {
@@ -34,10 +44,9 @@ const Resume = () => {
       location: "Dundee",
       period: "July 2023 - January 2025",
       achievements: [
-        "Developed NCR Atleos IoT Enterprise OEM Windows image deployed on 285,000+ ATMs globally",
-        "Created tools for software integration and hardware testing of new components",
-        "Deployed and maintained cloud solutions on Microsoft Azure using Kubernetes",
-        "Refactored OEM Windows Image build process from manual to fully automated, saving 100s of hours annually"
+        "Developed the NCR Atleos IoT Enterprise OEM Windows image deployed on 285,000+ ATMs globally.",
+        "Created tools for software integration and hardware testing of new components.",
+        "Deployed and maintained cloud solutions on Microsoft Azure using Kubernetes and automated the OEM Windows image build process to save hundreds of hours annually."
       ]
     },
     {
@@ -46,32 +55,19 @@ const Resume = () => {
       location: "Dundee",
       period: "November 2022 - June 2023",
       achievements: [
-        "Created gamified bug bounty application using React and Node.js with MongoDB backend",
-        "Selected based on web development excellence and interest in meaningful computer interaction",
-        "Work included in published research paper exploring gamification in cybersecurity",
-        "Presented monthly updates to stakeholders on project progress"
-      ]
-    },
-    {
-      title: "Sales Assistant",
-      company: "Currys PLC",
-      location: "Dundee", 
-      period: "October 2020 - June 2023",
-      achievements: [
-        "Consistently achieved 30 KPIs and remained within company's top 500 colleagues",
-        "Completed 100% of company's skills matrix across multiple departments",
-        "Selected as product reviewer for HP, Sage Appliances, Logitech and Google",
-        "Achieved Mental Health Champion certificate from MHFA England"
+        "Created a gamified bug bounty application using React and Node.js with a MongoDB backend to promote proactive vulnerability reporting and security awareness.",
+        "Selected for web development excellence and an interest in meaningful computer interaction, with work included in published research around gamification in cybersecurity.",
+        "Presented monthly updates to stakeholders on project progress and contributed to a platform that engaged students in security-focused learning."
       ]
     }
   ];
 
   const education = [
     {
-      degree: "Bachelors of Science (Hons) in Computing",
-      school: "University of Abertay Dundee",
+      degree: "BSc (Hons) Computing",
+      school: "Abertay University",
       period: "2019 - 2023",
-      focus: "Software Engiineering, Software Architecture, Cybersecurity, Human-Computer Interaction"
+      focus: "Software Engineering, Software Architecture, Cybersecurity, Human-Computer Interaction"
     },
   ];
 
@@ -83,7 +79,10 @@ const Resume = () => {
             Professional <span className="gradient-text">Experience</span>
           </h2>
           <p className="text-xl text-foreground-muted max-w-3xl mx-auto mb-8">
-            A comprehensive overview of my career journey and achievements
+            A concise overview of my career journey, leadership experience, and technical achievements
+          </p>
+          <p className="text-lg text-foreground-muted max-w-4xl mx-auto mb-8">
+            Results-driven Software Engineering Manager with a strong track record delivering secure, enterprise-scale solutions in fintech and IoT. I specialise in cloud-native architecture, CI/CD automation, and AI-enabled engineering practices while leading teams and modernising legacy environments.
           </p>
           <a
             href="/content/cameron-smart-resume.pdf"
@@ -156,32 +155,14 @@ const Resume = () => {
               <h3 className="text-2xl font-bold text-primary mb-6">Certifications</h3>
               <div className="space-y-4">
                 {[
-                  "Project Management Institute Certified Associate in Project Management (CAPM)",
+                  "Project Management Institute Project Management Professional (PMP) - Expected July 2026",
+                  "Project Management Institute Agile Certified Practitioner (ACP) - May 2026",
+                  "Project Management Institute Certified Associate in Project Management (CAPM) - January 2025",
                 ].map((cert, index) => (
                   <div key={index} className="tech-card">
                     <p className="font-medium">{cert}</p>
                   </div>
                 ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-primary mb-6">Key Achievements</h3>
-              <div className="tech-card">
-                <ul className="space-y-3 text-sm">
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-accent rounded-full mr-3 mt-2 flex-shrink-0" />
-                    <span className="text-foreground-muted">Scaled IoT solutions powering 285,000+ ATMs worldwide.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-accent rounded-full mr-3 mt-2 flex-shrink-0" />
-                    <span className="text-foreground-muted">Drove cloud & CI/CD migrations, boosting speed and reliability.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-accent rounded-full mr-3 mt-2 flex-shrink-0" />
-                    <span className="text-foreground-muted">PMI-CAPM certified; active in STEM outreach & D&I advocacy.</span>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>

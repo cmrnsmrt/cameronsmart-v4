@@ -1,7 +1,6 @@
 import { ArrowDown, Download, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-
 const Hero = () => {
   const scrollToAbout = () => {
     document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" });
@@ -11,7 +10,7 @@ const Hero = () => {
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background-secondary to-background-tertiary" />
-      
+
       {/* Floating geometric shapes */}
       <div className="absolute top-20 left-10 w-20 h-20 border border-primary/20 rounded-lg animate-float" />
       <div className="absolute bottom-40 right-20 w-16 h-16 border border-accent/20 rounded-full animate-float" style={{ animationDelay: "2s" }} />
@@ -27,11 +26,10 @@ const Hero = () => {
                 <span className="block gradient-text">Smart</span>
               </h1>
               <p className="text-xl lg:text-2xl text-foreground-muted font-medium">
-                Software Engineer | Software Architecture
+                Software Engineering Manager | Software Architecture
               </p>
               <p className="text-lg text-foreground-muted max-w-lg mx-auto lg:mx-0">
-                Career-driven Software Engineer with experience delivering enterprise-scale solutions in the fintech sector. 
-                Passionate about creating positive change through innovative technology and collaborative leadership.
+                Results-driven Software Engineering Manager with a strong track record delivering secure, scalable solutions in fintech and IoT. Passionate about cloud-native architecture, AI-enabled automation, and leading teams to create measurable business impact.
               </p>
             </div>
 

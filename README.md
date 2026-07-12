@@ -19,14 +19,10 @@ This project is built with:
 1. **Install dependencies:**
    ```sh
    npm install
-   # or, if you use bun:
-   bun install
    ```
 2. **Start the development server:**
    ```sh
    npm run dev
-   # or
-   bun run dev
    ```
    The app will be available at http://localhost:5173 (or as indicated in the terminal).
 

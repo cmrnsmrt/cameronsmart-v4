@@ -1,36 +1,38 @@
 import { Code, Database, Cloud, GitBranch, Cpu, Globe } from "lucide-react";
+
 const Skills = () => {
   const skillCategories = [{
     title: "Programming Languages",
     icon: Code,
-    skills: ["Python", "C#", "C++", "JavaScript", "React", "Node.js", "PowerShell", "Batch"],
+    skills: ["Python", "C#", "C++", "JavaScript", "React", "Node.js", "PowerShell", "Bash"],
     color: "primary"
   }, {
     title: "DevOps & Cloud",
     icon: Cloud,
-    skills: ["Azure", "Kubernetes", "Docker", "GitHub Actions", "Jenkins", "CI/CD Pipelines"],
+    skills: ["Azure", "Kubernetes", "Docker", "GitHub Actions", "Jenkins", "Sonar", "Mend"],
     color: "accent"
   }, {
-    title: "Development Tools",
-    icon: GitBranch,
-    skills: ["Git", "Jira", "Confluence", "SonarQube", "Test Driven Development", "Agile/Scrum"],
-    color: "primary"
-  }, {
-    title: "Architecture & Design",
+    title: "AI & Automation",
     icon: Cpu,
-    skills: ["System Architecture", "IoT Solutions", "Microservices", "Enterprise Solutions", "Predictive Maintenance"],
-    color: "accent"
-  }, {
-    title: "Certifications",
-    icon: Database,
-    skills: ["PMI CAPM", "MHFA England Mental Health Champion"],
+    skills: ["Azure OpenAI", "Azure AI Foundry", "GitHub Copilot", "Automation", "Threat Modelling"],
     color: "primary"
   }, {
-    title: "Specializations",
+    title: "Leadership & Delivery",
+    icon: GitBranch,
+    skills: ["Servant Leadership", "Team Leadership", "Roadmapping", "Stakeholder Management", "Agile/Scrum", "TDD"],
+    color: "accent"
+  }, {
+    title: "Processes & Practices",
+    icon: Database,
+    skills: ["Architecture Design", "CI/CD", "Security", "Compliance", "Git", "Jira", "Confluence"],
+    color: "primary"
+  }, {
+    title: "Specialisations",
     icon: Globe,
-    skills: ["Fintech Solutions", "ATM Systems", "Global IoT Deployment", "Enterprise Scale", "DevOps Automation"],
+    skills: ["Fintech Solutions", "ATM Systems", "Global IoT Deployment", "Enterprise Scale", "Predictive Maintenance"],
     color: "accent"
   }];
+
   const getColorClasses = (color: string) => {
     if (color === "primary") {
       return {
@@ -45,22 +47,25 @@ const Skills = () => {
       bg: "bg-accent/10"
     };
   };
-  return <section id="skills" className="section-padding bg-background-secondary">
+
+  return (
+    <section id="skills" className="section-padding bg-background-secondary">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             Technical <span className="gradient-text">Expertise</span>
           </h2>
           <p className="text-xl text-foreground-muted max-w-3xl mx-auto">
-            Technologies and methodologies I use to build robust, scalable systems
+            Technologies and methodologies I use to build robust, scalable systems and high-performing teams
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => {
-          const colors = getColorClasses(category.color);
-          const IconComponent = category.icon;
-          return <div key={index} className={`tech-card group hover:${colors.border}`}>
+            const colors = getColorClasses(category.color);
+            const IconComponent = category.icon;
+            return (
+              <div key={index} className={`tech-card group hover:${colors.border}`}>
                 <div className="flex items-center mb-6">
                   <div className={`p-3 rounded-lg ${colors.bg} mr-4`}>
                     <IconComponent className={`h-6 w-6 ${colors.icon}`} />
@@ -76,8 +81,9 @@ const Skills = () => {
                     </div>
                   ))}
                 </div>
-              </div>;
-        })}
+              </div>
+            );
+          })}
         </div>
 
         <div className="mt-16 text-center">
@@ -100,6 +106,8 @@ const Skills = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Skills;
