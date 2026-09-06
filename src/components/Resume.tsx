@@ -76,13 +76,13 @@ const Resume = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Professional <span className="gradient-text">Experience</span>
+            Proof in <span className="gradient-text">practice</span>
           </h2>
           <p className="text-xl text-foreground-muted max-w-3xl mx-auto mb-8">
-            A concise overview of my career journey, leadership experience, and technical achievements
+            The roles, systems, and outcomes
           </p>
           <p className="text-lg text-foreground-muted max-w-4xl mx-auto mb-8">
-            Results-driven Software Engineering Manager with a strong track record delivering secure, enterprise-scale solutions in fintech and IoT. I specialise in cloud-native architecture, CI/CD automation, and AI-enabled engineering practices while leading teams and modernising legacy environments.
+            I am a hands-on Software Engineering Manager with experience delivering secure, enterprise-scale systems in fintech and IoT. I lead through context and trust: staying close to architecture and code while helping engineers grow, collaborate, and deliver with confidence.
           </p>
           <a
             href="/content/cameron-smart-resume.pdf"
@@ -103,7 +103,7 @@ const Resume = () => {
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Experience */}
           <div className="lg:col-span-2 space-y-8">
-            <h3 className="text-2xl font-bold text-primary mb-6">Work Experience</h3>
+            <h3 className="text-2xl font-bold text-primary mb-6">How that looks in practice</h3>
             {experience.map((job, index) => (
               <div key={index} className="tech-card">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
@@ -155,9 +155,9 @@ const Resume = () => {
               <h3 className="text-2xl font-bold text-primary mb-6">Certifications</h3>
               <div className="space-y-4">
                 {[
-                  "Project Management Institute Project Management Professional (PMP) - Expected July 2026",
-                  "Project Management Institute Agile Certified Practitioner (ACP) - May 2026",
-                  "Project Management Institute Certified Associate in Project Management (CAPM) - January 2025",
+                  "Project Management Institute Project Management Professional (PMP) - Earned July 2026",
+                  "Project Management Institute Agile Certified Practitioner (ACP) - Earned May 2026",
+                  "Project Management Institute Certified Associate in Project Management (CAPM) - Earned January 2025",
                 ].map((cert, index) => (
                   <div key={index} className="tech-card">
                     <p className="font-medium">{cert}</p>

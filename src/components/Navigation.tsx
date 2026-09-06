@@ -33,7 +33,7 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-effect ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-border/70 bg-background ${
         isScrolled ? "shadow-lg" : ""
       }`}
     >
@@ -41,7 +41,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           <button
             onClick={() => scrollToSection("#hero")}
-            className="text-xl font-bold gradient-text hover:scale-105 transition-transform"
+            className="text-lg font-bold tracking-tight text-foreground hover:text-primary transition-colors"
           >
             Cameron Smart
           </button>
@@ -52,7 +52,7 @@ const Navigation = () => {
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground-muted hover:text-primary transition-colors duration-200 font-medium"
+                className="text-sm text-foreground-muted hover:text-primary transition-colors duration-200 font-medium"
               >
                 {item.label}
               </button>
@@ -65,6 +65,7 @@ const Navigation = () => {
             size="icon"
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle navigation menu"
           >
             {isMobileMenuOpen ? <X /> : <Menu />}
           </Button>

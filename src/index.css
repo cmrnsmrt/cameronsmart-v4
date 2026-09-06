@@ -1,52 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Fira+Code:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Cameron Smart Portfolio Design System - Modern Tech Aesthetic
-All colors MUST be HSL.
-*/
+/* Cameron Smart Portfolio Design System - Build console */
 
 @layer base {
   :root {
-    /* Dark mode primary colors */
-    --background: 220 26% 6%;
-    --background-secondary: 220 20% 8%;
-    --background-tertiary: 220 15% 10%;
-    --foreground: 210 40% 98%;
-    --foreground-muted: 215 20% 70%;
+    --background: 0 0% 100%;
+    --background-secondary: 0 0% 100%;
+    --background-tertiary: 0 0% 100%;
+    --foreground: 171 100% 15%;
+    --foreground-muted: 171 33% 31%;
 
     /* Modern tech accent colors */
-    --primary: 199 89% 48%;  /* Cyan blue */
-    --primary-glow: 199 89% 55%;
-    --primary-foreground: 220 26% 6%;
+    --primary: 171 100% 15%;
+    --primary-glow: 171 100% 22%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 12%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 171 100% 15%;
+    --secondary-foreground: 0 0% 100%;
 
-    --accent: 271 91% 65%;  /* Electric purple */
-    --accent-glow: 271 91% 70%;
-    --accent-foreground: 220 26% 6%;
+    --accent: 144 16% 85%;
+    --accent-glow: 144 16% 91%;
+    --accent-foreground: 171 100% 15%;
 
-    --card: 220 15% 10%;
-    --card-foreground: 210 40% 98%;
-    --card-border: 220 15% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 171 100% 15%;
+    --card-border: 144 14% 67%;
 
-    --muted: 220 15% 12%;
-    --muted-foreground: 215 20% 60%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 171 33% 31%;
 
-    --border: 220 15% 15%;
-    --input: 220 15% 12%;
-    --ring: 199 89% 48%;
+    --border: 144 14% 67%;
+    --input: 0 0% 100%;
+    --ring: 171 100% 15%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
-    --gradient-hero: linear-gradient(135deg, hsl(220 26% 6%) 0%, hsl(220 20% 8%) 50%, hsl(220 15% 10%) 100%);
+    --gradient-primary: hsl(var(--primary));
+    --gradient-accent: hsl(var(--accent));
+    --gradient-hero: hsl(var(--background));
     
     /* Shadows and glows */
-    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.2);
-    --shadow-accent-glow: 0 0 40px hsl(var(--accent) / 0.15);
-    --shadow-card: 0 10px 30px -10px hsl(220 26% 2% / 0.3);
+    --shadow-glow: none;
+    --shadow-accent-glow: none;
+    --shadow-card: none;
 
     --radius: 0.75rem;
 
@@ -113,6 +112,8 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.6;
     font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 
@@ -141,45 +142,138 @@ All colors MUST be HSL.
 
   /* Interactive elements */
   .tech-card {
-    @apply bg-card border border-card-border rounded-lg p-6 transition-all duration-300;
-    @apply hover:border-primary/30 hover:shadow-lg hover:-translate-y-1;
-    box-shadow: var(--shadow-card);
+    @apply bg-card border border-card-border rounded-xl p-7;
+    box-shadow: 4px 5px 0 hsl(var(--foreground) / 0.1);
   }
 
   .tech-card:hover {
-    box-shadow: var(--shadow-glow), var(--shadow-card);
+    box-shadow: 4px 5px 0 hsl(var(--foreground) / 0.1);
+  }
+
+  .tech-card .text-accent {
+    color: hsl(var(--primary));
   }
 
   .hero-button {
-    @apply inline-flex items-center justify-center px-8 py-3 rounded-lg font-semibold transition-all duration-300;
-    @apply bg-primary text-primary-foreground hover:scale-105 active:scale-95;
-    background: var(--gradient-primary);
-    box-shadow: var(--shadow-glow);
+    @apply inline-flex items-center justify-center px-7 py-3 rounded-xl font-semibold transition-all duration-300;
+    @apply bg-primary text-primary-foreground hover:bg-secondary active:translate-y-0.5;
+    box-shadow: 4px 5px 0 hsl(var(--foreground) / 0.18);
   }
 
   .hero-button:hover {
-    box-shadow: 0 0 60px hsl(var(--primary) / 0.3);
+    box-shadow: none;
   }
 
   .accent-button {
-    @apply inline-flex items-center justify-center px-6 py-2 rounded-lg font-medium transition-all duration-300;
-    @apply bg-accent text-accent-foreground hover:scale-105;
-    background: var(--gradient-accent);
+    @apply inline-flex items-center justify-center px-6 py-2 rounded-xl font-medium transition-all duration-300;
+    @apply bg-accent text-accent-foreground hover:bg-secondary;
+  }
+
+  .resume-button {
+    @apply inline-flex items-center justify-center px-6 py-2 rounded-xl font-medium transition-all duration-300 border-primary text-primary hover:bg-primary hover:text-primary-foreground;
+    background-color: hsl(var(--accent));
+  }
+
+  .hero-surface {
+    background: hsl(var(--background));
+    border-bottom: 1px solid hsl(var(--border));
+  }
+
+  .hero-grid {
+    background-image: radial-gradient(hsl(var(--primary) / 0.18) 1.5px, transparent 1.5px);
+    background-size: 22px 22px;
+    background-position: var(--pattern-x, 0px) var(--pattern-y, 0px);
+    transition: background-position 180ms ease-out;
+    mask-image: linear-gradient(to bottom right, black, transparent 58%);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-grid {
+      transition: none;
+    }
   }
 
   .glass-effect {
-    @apply bg-card/50 backdrop-blur-sm border border-card-border;
+    @apply bg-background/90 backdrop-blur-md border-b border-border;
   }
 
   .section-padding {
-    @apply px-6 sm:px-12 lg:px-24 py-16 lg:py-24;
+    @apply px-6 sm:px-12 lg:px-24 py-20 lg:py-28;
+  }
+
+  section h2 {
+    line-height: 1.08;
+  }
+
+  section h3,
+  section h4 {
+    line-height: 1.2;
+  }
+
+  section .text-foreground-muted {
+    line-height: 1.75;
+  }
+
+  section .text-center > p {
+    line-height: 1.65;
   }
 
   .gradient-text {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: hsl(var(--primary));
+  }
+
+  .hero-surface h1 {
+    line-height: 1;
+    letter-spacing: -0.04em;
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    max-width: 18ch;
+  }
+
+  .hero-surface .section-padding {
+    @apply py-28 lg:py-36;
+  }
+
+  .hero-copy {
+    max-width: 42rem;
+  }
+
+  .hero-kicker {
+    font-family: 'Fira Code', monospace;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .hero-proof {
+    max-width: 42rem;
+  }
+
+  .brief-panel {
+    @apply bg-secondary text-secondary-foreground rounded-md p-6;
+    box-shadow: 10px 10px 0 hsl(var(--primary) / 0.18);
+  }
+
+  .brief-label {
+    font-family: 'Fira Code', monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .hero-surface .brief-panel .text-foreground-muted {
+    color: hsl(var(--secondary-foreground) / 0.72);
+  }
+
+  .brief-rule {
+    border-color: hsl(var(--secondary-foreground) / 0.2);
+  }
+
+  .status-dot {
+    @apply h-2 w-2 rounded-full bg-accent;
+  }
+
+  .hero-profile-panel {
+    @apply rounded-xl border border-card-border bg-card p-7;
+    box-shadow: 7px 8px 0 hsl(var(--accent) / 0.75);
   }
 }
 
