@@ -1,38 +1,9 @@
-import { useState } from "react";
-import { Mail, MapPin, Github, Linkedin, Send } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
 import { useAnalytics } from "@/hooks/use-analytics";
 
 const Contact = () => {
   const { event } = useAnalytics();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
-  const { toast } = useToast();
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Really need to implement form submission logic here
-    event('form_submit', 'contact', 'contact_form');
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", subject: "", message: "" });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
 
   return (
     <section id="contact" className="section-padding bg-background">
@@ -42,7 +13,7 @@ const Contact = () => {
             Let's <span className="gradient-text">Connect</span>
           </h2>
           <p className="text-xl text-foreground-muted max-w-3xl mx-auto">
-            Have a project in mind or want to discuss software architecture? I'd love to hear from you.
+            Looking for a thoughtful technical leader who still understands the code? Let's talk.
           </p>
         </div>
 
@@ -50,12 +21,9 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold mb-6 text-primary">Get in Touch</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-primary">Start a conversation</h3>
               <p className="text-foreground-muted leading-relaxed mb-8">
-                I'm always interested in discussing new opportunities, challenging projects, 
-                or just having a conversation about software architecture and engineering. 
-                Whether you're looking for technical leadership, architectural consulting, 
-                or just want to connect with a fellow engineer, don't hesitate to reach out.
+                I am open to conversations about engineering leadership, architecture, team health, and difficult delivery problems. Tell me what you are working through, where the team is getting stuck, or what you want to build next.
               </p>
             </div>
 
@@ -88,7 +56,7 @@ const Contact = () => {
             </div>
 
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-primary">Follow Me</h4>
+              <h4 className="text-lg font-semibold text-primary">Find me elsewhere</h4>
               <div className="flex space-x-4">
                 <a
                   href="https://github.com/cmrnsmrt"
@@ -108,90 +76,23 @@ const Contact = () => {
                 </a>
               </div>
             </div>
-
-            <div className="tech-card">
-              <h4 className="font-semibold mb-3 text-accent">Response Time</h4>
-              <p className="text-foreground-muted text-sm">
-                I typically respond to messages within 24-48 hours. For urgent matters, 
-                feel free to mention it in your message subject line.
-              </p>
-            </div>
           </div>
 
-          {/* Contact Form */}
+          {/* Direct email action */}
           <div className="tech-card">
-            <h3 className="text-2xl font-semibold mb-6 text-primary">Send a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">
-                    Name *
-                  </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="bg-background-tertiary border-card-border focus:border-primary"
-                    placeholder="Your full name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    Email *
-                  </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="bg-background-tertiary border-card-border focus:border-primary"
-                    placeholder="your@email.com"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                  Subject *
-                </label>
-                <Input
-                  id="subject"
-                  name="subject"
-                  type="text"
-                  required
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="bg-background-tertiary border-card-border focus:border-primary"
-                  placeholder="What's this about?"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Message *
-                </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={6}
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="bg-background-tertiary border-card-border focus:border-primary resize-none"
-                  placeholder="Tell me about your project, question, or just say hello..."
-                />
-              </div>
-
-              <Button type="submit" className="w-full hero-button">
-                <Send className="mr-2 h-5 w-5" />
-                Send Message
-              </Button>
-            </form>
+            <h3 className="text-2xl font-semibold mb-4 text-primary">Email me directly</h3>
+            <p className="text-foreground-muted leading-relaxed mb-8">
+              I would be glad to hear what you are working on, what is difficult, or where you think I could help.
+            </p>
+            <Button className="w-full hero-button" asChild>
+              <a
+                href="mailto:cameron.smart@hotmail.co.uk"
+                onClick={() => event('email_click', 'contact', 'cameron.smart@hotmail.co.uk')}
+              >
+                <Mail className="mr-2 h-5 w-5" />
+                Email Cameron
+              </a>
+            </Button>
           </div>
         </div>
       </div>
