@@ -133,10 +133,6 @@ const Hero = () => {
                 <p className="text-base sm:text-lg font-bold leading-tight text-foreground">PMI-ACP</p>
                 <p className="break-words text-xs uppercase leading-tight tracking-wider text-foreground-muted">Agile delivery</p>
               </div>
-              <div className="min-w-0 border-l border-border pl-4">
-                <p className="text-base sm:text-lg font-bold leading-tight text-foreground">3</p>
-                <p className="break-words text-xs uppercase leading-tight tracking-wider text-foreground-muted">Direct reports</p>
-              </div>
             </div>
           </div>
 
